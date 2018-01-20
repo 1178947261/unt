@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="postindex" method="post">
+    {% for a in name %}
+        <tr bgcolor="aqua">
+            <td><p>姓名：{{ a.username }}</p></td>
+            <p>性别：{{ a.sex }}</p>
+            <p>email:{{ a.email }}</p>
+        </tr>
+    {% endfor %}
+    <p>姓名:<INPUT type="text" name="username"></p>
+    <p>性别:<INPUT type="text" name="sex"></p>
+    <p>email:<INPUT type="text" name="email"></p>
+    <p><input type="submit" value="提交"></p>
+</form>
+</body>
+</html>
